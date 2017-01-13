@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= json.project.seo_title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="__sync_contentCategory" content="meterA">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <%= !json.project.embedded ? t.include("partials/_paywall.html") : t.include("partials/_embedframe.html") %>
+
+    <%= t.include("partials/_head.html") %>
+
+  </head>
+
+  <%= !json.project.embedded ? "<body>" : "<body is='responsive-body'>" %>
+
+    <div class="outer">
+
+      <div class="hed">Trump v. California</div>
+      <div class="chatter">PEOTUS Donald Trump and California have wildly diverging policy positions on nearly every important issue. Explore below to see what those positions are and how California might oppose federal policies that are counter to California policies.</div>
+
+      <div id="top"></div>
+
+      <div class="button-container">
+        <% csv.TrumpVCal.forEach(function(section,idx){ %>
+          <% if (idx == 0) { %>
+            <div class="button selected" id="button<%=section.slug%>"><%=section.topic%></div>
+          <% } else { %>
+            <div class="button" id="button<%=section.slug%>"><%=section.topic%></div>
+          <% } %>
+        <% }) %>
+      </div>
+
+      <% csv.TrumpVCal.forEach(function(section,idx){ %>
+
+        <% if (idx == 0) { %>
+          <div class="section selected" id="section<%=section.slug%>">
+        <% } else { %>
+          <div class="section" id="section<%=section.slug%>">
+        <% } %>
+
+          <div class="section-title"><%=section.topic%></div>
+
+          <div class="inline-img">
+            <img src="http://ww2.hdnux.com/photos/54/11/64/11813237/3/2000x1000.jpg">
+            <div class="caption"><%=section.caption%> <span class="byline"><%=section.photographer%>, The Chronicle</span></div>
+          </div>
+
+          <div class="sub-title">California's position</div>
+          <div class="sub-section"><%=section.california%></div>
+
+          <div class="sub-title">PEOTUS's position</div>
+          <div class="sub-section"><%=section.trump%></div>
+
+          <div class="sub-title">Opposition</div>
+          <div class="sub-section"><%=section.opposition%></div>
+
+          <p><div class="author"><%=section.author%>  &bull; <a href="mailto:eoneill@sfchronicle.com">eoneill@sfchronicle.com</a>   &bull; <a href = "https://twitter.com/emmaruthoneill" target="_blank">@emmaruthoneill</a></div></p>
+
+        </div>
+
+      <% }); %>
+
+      <div class="scroll-button button" id="scroll">Scroll to top</div>
+
+      <div class="credit">
+        <div class="entry">Emma O'Neill  &bull; <a href="mailto:eoneill@sfchronicle.com">eoneill@sfchronicle.com</a>   &bull; <a href = "https://twitter.com/emmaruthoneill" target="_blank">@emmaruthoneill</a></div>
+      </div>
+
+
+    </div>
+
+    <script src="app.js" async></script>
+    <%= t.include("partials/_helloSFC.html") %>
+
+  </body>
+</html>
