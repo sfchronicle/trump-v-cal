@@ -14,30 +14,39 @@ require("./lib/social"); //Do not delete
   });
 });
 
-function animate(elem, style, unit, from, to, time, prop) {
-    if (!elem) {
-        return;
-    }
-    var start = new Date().getTime(),
-        timer = setInterval(function () {
-            var step = Math.min(1, (new Date().getTime() - start) / time);
-            if (prop) {
-                elem[style] = (from + step * (to - from))+unit;
-            } else {
-                elem.style[style] = (from + step * (to - from))+unit;
-            }
-            if (step === 1) {
-                clearInterval(timer);
-            }
-        }, 25);
-    if (prop) {
-          elem[style] = from+unit;
-    } else {
-          elem.style[style] = from+unit;
-    }
-}
+// WHAT I ACTUALLY ENDED UP USING ON WCM
 
-document.getElementById("scroll").addEventListener("click", function() {
-    var target = document.getElementById("scroll");
-    animate(document.scrollingElement || document.documentElement, "scrollTop", "", target.offsetTop, 0, 500, true);
-});
+// document.getElementById("scroll").addEventListener("click", function() {
+//     $('html, body').animate({
+//         scrollTop: $("#scroll-to-top").offset().top
+//     }, 600);
+// });
+
+// function animate(elem, style, unit, from, to, time, prop) {
+//     if (!elem) {
+//         return;
+//     }
+//     var start = new Date().getTime(),
+//         timer = setInterval(function () {
+//             var step = Math.min(1, (new Date().getTime() - start) / time);
+//             if (prop) {
+//                 elem[style] = (from + step * (to - from))+unit;
+//             } else {
+//                 elem.style[style] = (from + step * (to - from))+unit;
+//             }
+//             if (step === 1) {
+//                 clearInterval(timer);
+//             }
+//         }, 25);
+//     if (prop) {
+//           elem[style] = from+unit;
+//     } else {
+//           elem.style[style] = from+unit;
+//     }
+// }
+//
+// document.getElementById("scroll").addEventListener("click", function() {
+//     var target = document.getElementById("scroll");
+//     var top = document.getElementById("scroll-to-top");
+//     animate(document.scrollingElement || document.documentElement, "scrollTop", "", target.offsetTop, top.offsetTop, 500, true);
+// });

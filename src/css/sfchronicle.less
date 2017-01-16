@@ -33,17 +33,17 @@ main {
 }
 
 a {
-  color: @gray-blue;
+  color: #C12020;//@gray-blue;
   text-decoration: none;
   outline: 0 !important;
   &:hover {
-    color: darken(@gray-blue,10%);
+    color: darken(#C12020,10%);//@gray-blue,10%);
   }
   img {
     border: none;
   }
   :hover {
-    color: darken(@gray-blue,10%);
+    color: darken(#C12020,10%);//@gray-blue,10%);
   }
 }
 
@@ -73,7 +73,7 @@ hr {
   }
 }
 
-p {
+.p_interactive {
   max-width: 730px;
   margin: auto;
   padding: 0 15px;
@@ -81,7 +81,7 @@ p {
 
   a {
     text-decoration: none;
-    color: @gray-blue;
+    color: #C12020;//@gray-blue;
   }
 
   @media @mobile {
@@ -148,7 +148,7 @@ li {
     margin: 10px;
   }
 }
-.source, .credit {
+.source, .credit-emma {
   clear: left;
   padding-top: 10px;
   font-size: 12px;
@@ -210,29 +210,29 @@ text {
     margin-bottom: 40px;
 }
 
-.title {
-  font-family: @body-bold;
-  font-size: 60px;
-  padding: 0 10px;
-  text-align: center;
-  margin: 10px auto 0;
-  max-width: 835px;
-
-  &.long {
-    font-size: 50px;
-    line-height: 1.2;
-    margin: 20px auto 0;
-    margin-top: 10px;
-    margin-bottom: 25px;
-
-    &.text-width {
-      max-width:800px;
-    }
-    @media @mobile {
-      font-size: 1.8em;
-    }
-  }
-}
+// .title {
+//   font-family: @body-bold;
+//   font-size: 60px;
+//   padding: 0 10px;
+//   text-align: center;
+//   margin: 10px auto 0;
+//   max-width: 835px;
+//
+//   &.long {
+//     font-size: 50px;
+//     line-height: 1.2;
+//     margin: 20px auto 0;
+//     margin-top: 10px;
+//     margin-bottom: 25px;
+//
+//     &.text-width {
+//       max-width:800px;
+//     }
+//     @media @mobile {
+//       font-size: 1.8em;
+//     }
+//   }
+// }
 
 .over-img {
   position: absolute;
@@ -291,7 +291,7 @@ text {
 
   &.special {
     a {
-      color: @gray-blue;
+      color: #C12020;//@gray-blue;
     }
   }
   &.social {
@@ -299,7 +299,7 @@ text {
     margin: 0 6px;
     padding: 4px 2px;
     a {
-      color: @gray-blue;
+      color: #C12020;//@gray-blue;
     }
   }
   &.email {
@@ -384,11 +384,11 @@ header {
     margin-bottom: 2.5em;
   }
 }
-
-.byline {
-  color: @rename-color;
-  font-style: italic;
-}
+//
+// .byline {
+//   color: @rename-color;
+//   font-style: italic;
+// }
 
 .background-img {
     height: 800px;
