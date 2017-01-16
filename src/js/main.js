@@ -1,6 +1,6 @@
 require("./lib/social"); //Do not delete
 
-["guns","education","environment","immigration","labor","health","energy","transportation"].forEach(function(section){
+["healthcare","environment","immigration","education","guncontrol","transportation","labor","energy"].forEach(function(section){
   // set up clicking to update map interactive on mobile
   document.getElementById("button"+section).addEventListener("click", function() {
     var sectionElements = document.getElementsByClassName("section");

@@ -18,8 +18,8 @@
 
     <div class="outer">
 
-      <div class="hed">Trump v. California</div>
-      <div class="chatter">PEOTUS Donald Trump and California have wildly diverging policy positions on nearly every important issue. Explore below to see what those positions are and how California might oppose federal policies that are counter to California policies.</div>
+      <div class="hed">Golden State prepares for new president</div>
+      <div class="chatter">California finds itself at odds with Trump on such issues as immigration, gun control and environmental protections. Click on the buttons below to explore the conflicting positions and how the state might oppose federal policies.</div>
 
       <div id="top"></div>
 
@@ -43,24 +43,29 @@
 
           <div class="section-title"><%=section.topic%></div>
 
+          <div class="inline-img">
+            <img src="<%=section.photo%>">
+            <div class="caption"><%=section.caption%> <span class="byline"><%=section.photographer%>, <%=section.photog_institution%></span></div>
+          </div>
 
-
-          <div class="sub-title">California's position</div>
-          <div class="sub-section"><%=section.california%></div>
-
-          <div class="sub-title">PEOTUS's position</div>
+          <div class="sub-title">What Trump wants</div>
           <div class="sub-section"><%=section.trump%></div>
 
-          <div class="sub-title">Opposition</div>
+          <div class="sub-title">What California has</div>
+          <div class="sub-section"><%=section.california%></div>
+
+          <div class="sub-title">What could happen</div>
           <div class="sub-section"><%=section.opposition%></div>
 
-          <p><div class="author"><%=section.author%>  &bull; <a href="mailto:eoneill@sfchronicle.com">eoneill@sfchronicle.com</a>   &bull; <a href = "https://twitter.com/emmaruthoneill" target="_blank">@emmaruthoneill</a></div></p>
+          <p><div class="author"><%=section.author%>  &bull; <a href="mailto:<%=section.author_email%>"><%=section.author_email%></a>   &bull; <a href = "https://twitter.com/<%=section.author_twitter%>" target="_blank">@<%=section.author_twitter%></a></div></p>
 
         </div>
 
       <% }); %>
 
       <div class="scroll-button button" id="scroll">Scroll to top</div>
+
+      <hr></hr>
 
       <div class="credit">
         <div class="entry">Interactive Producer: Emma O'Neill  &bull; <a href="mailto:eoneill@sfchronicle.com">eoneill@sfchronicle.com</a>   &bull; <a href = "https://twitter.com/emmaruthoneill" target="_blank">@emmaruthoneill</a></div>
