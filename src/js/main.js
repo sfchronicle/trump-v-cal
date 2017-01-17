@@ -3,10 +3,10 @@ require("./lib/social"); //Do not delete
 ["healthcare","environment","immigration","education","guncontrol","transportation","labor","energy"].forEach(function(section){
   // set up clicking to update map interactive on mobile
   document.getElementById("button"+section).addEventListener("click", function() {
-    var sectionElements = document.getElementsByClassName("section");
+    var sectionElements = document.getElementsByClassName("section-emma");
     var buttonElements = document.getElementsByClassName("button");
     for(var i = 0; i < sectionElements.length; i++){
-      sectionElements[i].className = "section";
+      sectionElements[i].className = "section-emma";
       buttonElements[i].className = "button";
     };
     document.getElementById("section"+section).className += " selected";
